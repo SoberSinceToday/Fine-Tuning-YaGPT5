@@ -6,25 +6,24 @@
 пользователя.</h3>
 
 <h2>Немного <i>корректных</i> (или почти) примеров</h2>
-<blockquote>Чуть менее корректные есть в <code>git_utils</code>, совсем некорректные все же не грузил)</blockquote>
+<blockquote>Остальные есть в <code>git_utils</code>, совсем некорректные все же не грузил)</blockquote>
 
-<h5>Без памяти(Некоторые скриншоты могут быть ранней версией модели -> вывод не очень):</h5>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic0.png"></img>
+<h5>Без памяти(Некоторые скриншоты могут быть ранней версией модели, дообученной на неправильной разметке -> вывод не очень):</h5>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic0.png"></img>
 <hr>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic5.png"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/incorrect_pic2.jpg"></img>
 <hr>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic8.jpg"</img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic8.jpg"</img>
 <hr>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic9.2.jpg"></img>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic9.3.jpg"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/incorrect_pic1.jpg"></img>
 <hr> 
 <h5>С памятью:</h5>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic2.png"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic2.png"></img>
 <hr>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic4.4.png"></img>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic4.1.png"></img>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic4.3.png"></img>
-<img src="https://github.com/misis-programming2024-2025/misis2024f-24-17-sunik-t-v/blob/main/project/git_utils/pic4.2.png"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic4.4.png"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic4.1.png"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic4.3.png"></img>
+<img src="https://github.com/SoberSinceToday/Fine-Tuning-YaGPT5/blob/main/git_utils/pic4.2.png"></img>
 <hr>
 
 <h2>Quick Start</h2>
@@ -58,6 +57,7 @@
 
   <li><code>src/classes/Preprocessor.py</code> - Обрабатывает данные в соответствии с определенной логикой (Бьет сообщения на response-answer пары, отслеживает изменение темы, Так же реализована логика нахождения похожих сообщений с <code>Faiss</code>, но не использована вследствие ненадобности.)</li>
   <li><code>model_training.py</code> (10-28 строка) - Применение</li>
+  <li>Сохраняют по пути <code>/data/raw_dialog</code> и <code>/data/processed</code></li>
 </ul>
 
 <h3>• Fine-Tuning YandexGPT-5 Lite 8B pretrain
@@ -110,31 +110,3 @@ offload нет) + Проблема холодного старта (Модель
 <h4>Модель на удивление хорошо обучилась всего на 50к парах сообщений, особенно, учитывая мой стиль письма(недописанные
 слова, слова-замещения которых явно нет в pretrain данных)</h4>
 <h4>Всем кому я показывал, говорили мне, что это вылитый я, а к тому же еще и смешно, так что общая оценка <h>12/10</h></h4>
-
-## Разбалловка
-
-### Основная часть
-
-- [ ] 1 балл - Оформленное README проекта (описание, как локально развернуть, картинки/графики/выводы)
-- [ ] 1 балл - Структурированный проект на уровне директорий (не все файлы в одной папке) - пример ниже
-- [ ] 3 балла - Документация (подробное описание логики, структуры кода, описание классов/методов), можно как отдельный
-  readme
-- [ ] 3 балла - Применение ООП
-
-#### Суммарно 8 баллов
-
-### Фичи
-
-- [ ] 5 баллов - Работа с файлами (чтение и запись при парсинге и обработке диалогов)
-- [ ] 5 баллов - Интеграция с Telegram API (В связке с Pyrogram)
-- [ ] 10 баллов - GUI с использованием gradio
-- [ ] 10 баллов - REST API (Fast API для инференса модели)
-- [ ] 10 баллов - Интеграция ML модели/ее обучение
-
-#### Суммарно 40 баллов
-
-- [ ] 2 балла - Типизация в питоне
-- [ ] 2 балла - Логирование (в файл и консоль)
-- [ ] 5 балла - Докер образ
-
-#### Суммарно 9 баллов
