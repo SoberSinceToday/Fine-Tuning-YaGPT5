@@ -1,0 +1,13 @@
+__pycache__/
+venv/
+data/
+.gitignore
+readme_progress.md
+README.md
+*.logdocker build -t my-flask-app .
+
+*.session
+*.pyc
+*.pyo
+.env
+.git

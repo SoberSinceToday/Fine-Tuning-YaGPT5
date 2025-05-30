@@ -1,0 +1,15 @@
+data/
+final_model/
+src/utils/.env
+userSim_session.session
+
+*.pyc
+*.pyo
+__pycache__/
+
+.vscode/
+.idea/
+
+*.log
+*.bak
+*.swp
